@@ -1,0 +1,2 @@
+FROM microsoft/nanoserver
+CMD ["powershell.exe", "Write-Host 'Hello World YO!'"]
