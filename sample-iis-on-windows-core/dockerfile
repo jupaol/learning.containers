@@ -1,0 +1,11 @@
+FROM microsoft/iis
+
+EXPOSE 8000
+
+RUN mkdir c:\Websites\MyNewSite
+
+ADD src/ /Websites/MyNewSite
+
+RUN powershell -noprofile -command \
+    Import-Module IISAdministration; \
+    New-IISSite -Name MyNewSite -PhysicalPath c:\Websites\MyNewSite -BindingInformation "*:8000:"

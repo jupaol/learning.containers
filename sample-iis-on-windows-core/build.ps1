@@ -1,0 +1,1 @@
+docker image build --tag simple-iis-on-windows-core-site:01 .

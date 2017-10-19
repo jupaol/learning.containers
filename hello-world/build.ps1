@@ -1,0 +1,1 @@
+docker image build --tag jupaol/hello-world:01 .
