@@ -1,0 +1,9 @@
+FROM microsoft/windowsservercore:1709
+
+# docker push alexellisio/msbuild:12.0
+COPY Install.ps1 .
+RUN ["powershell", ".\\Install.ps1"]
+
+#WORKDIR "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0"
+
+CMD ["C:\\Program Files (x86)\\MSBuild\\12.0\\Bin\\msbuild.exe"]
